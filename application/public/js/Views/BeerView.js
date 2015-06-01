@@ -19,11 +19,9 @@ var BeerView = Backbone.View.extend({
 
     var name = this.$('.name').html();
     var style = this.$('.style').html();
-    var image = this.$('.image').html();
 
-    this.$('.name').html('<input type="text" class="form-control name-update" value="' + name + '">');
-    this.$('.style').html('<input type="text" class="form-control style-update" value="' + style + '">');
-    this.$('.image').html('<input type="text" class="form-control image-update" value="' + image + '">');
+    this.$('.name').html('<input type="text" class="name-update" value="' + name + '">');
+    this.$('.style').html('<input type="text" class="style-update" value="' + style + '">');
   },
 
   update: function(){

@@ -1,0 +1,37 @@
+body {
+  background-image: url("https://static.pexels.com/photos/1862/summer-sunshine-alcohol-drink.jpg");
+  background-size: cover;
+  background-color: gray;
+  background-blend-mode: soft-light;
+  background-attachment: fixed;
+}
+
+#age-check{
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+h1{
+  font-size: 100px;
+  margin-top: 13%;
+  margin-bottom: 0;
+}
+
+p{
+  font-size: 45px;
+  margin-top: -1%;
+  margin-bottom: 2%;
+}
+
+h2{
+  font-size: 30px;
+  margin: 0;
+}
+
+select{
+  margin-top: 1%;
+}
