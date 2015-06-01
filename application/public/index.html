@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/app.css">
+    <meta charset="UTF-8">
+    <title>Beer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Beer</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Style</th>
+            <th>Image</th>
+          </tr>
+          <tr>
+            <td><input class="name-input" value="Blue Moon"></td>
+            <td><input class="style-input" value="Wheat"></td>
+            <td><input class="image-input" value="http://zencrumble.com/wp-content/uploads/2014/10/blue-moon-beers.jpg"></td>
+            <td><button class="add-beer">Add</button></td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="beers-list"></div>
+
+    <script type="text/template" class="beers-list-template">
+      <div id="beer-block">
+        <div id="beer-block-elements">
+          <div><span class="name"><%= name %></span></div>
+          <div><span class="style"><%= style %></span></div>
+          <div><span class="image"><img src="<%= image %>"/></span></div>
+          <div>
+            <button class="edit-beer">Edit</button>
+            <button class="delete-beer">Delete</button>
+            <button class="update-beer" style="display: none">Update</button>
+            <button class="cancel" style="display: none">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/collections/BeersCollection.js"></script>
+    <script src="js/models/BeerModel.js"></script>
+    <script src="js/views/BeerView.js"></script>
+    <script src="js/views/BeersView.js"></script>
+  </body>
+</html>
