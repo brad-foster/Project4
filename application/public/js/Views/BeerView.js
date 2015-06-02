@@ -27,7 +27,16 @@ var BeerView = Backbone.View.extend({
   update: function(){
     this.model.set('name', $('.name-update').val());
     this.model.set('style', $('.style-update').val());
-    this.model.set('image', $('.image-update').val());
+    // this.model.set('image', $('.image-update').val());
+
+    this.model.save(null, {
+      success: function(response){
+        console.log('Successfully UPDATED beer with _id: ' + response.toJSON()._id);
+      },
+      error: function(response){
+        console.log('Failed to update beer!');
+      }
+    })
   },
 
   cancel: function(){
@@ -35,7 +44,14 @@ var BeerView = Backbone.View.extend({
   },
 
   delete: function(){
-    this.model.destroy();
+    this.model.destroy({
+      success: function(response){
+        console.log('Successfully DELETED beer with _id: ' + response.toJSON()._id);
+      },
+      error: function(){
+        console.log('Failed to DELETE beer!')
+      }
+    });
   },
 
   render: function(){

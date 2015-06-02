@@ -1,0 +1,15 @@
+@media (max-width: 600px){
+
+  h1 {
+    font-size: 75px;
+  }
+
+  .table {
+    margin: 0 auto;
+  }
+
+  th {
+    font-size: 20px;
+  }
+
+}

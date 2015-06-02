@@ -5,10 +5,18 @@ $(document).ready(function(){
       style: $('.style-input').val(),
       image: $('.image-input').val()
     });
-    // $('.name-input').val('');
-    // $('.style-input').val('');
-    // $('.image-input').val('');
-    console.log(beer.toJSON());
+    $('.name-input').val('');
+    $('.style-input').val('');
+    $('.image-input').val('');
     beers.add(beer);
-  })
+
+    beer.save(null, {
+      success: function(response){
+        console.log('Successfully SAVED beer with _id: ' + response.toJSON()._id);
+      },
+      error: function(){
+        console.log('Failed to save beer!')
+      }
+    });
+  });
 });

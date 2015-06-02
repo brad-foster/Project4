@@ -10,6 +10,17 @@ var BeersView = Backbone.View.extend({
       }, 30);
     }, this);
     this.model.on('remove', this.render, this);
+
+    this.model.fetch({
+      success: function(response){
+        _.each(response.toJSON(), function(item){
+          console.log('Successfully GOT beer with _id: ' + item._id);
+        });
+      },
+      error: function(){
+        console.log('Failed to get beers!');
+      }
+    });
   },
   render: function(){
     var self = this;

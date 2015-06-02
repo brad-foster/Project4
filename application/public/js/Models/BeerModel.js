@@ -1,3 +1,5 @@
+Backbone.Model.prototype.idAttribute = '_id';
+
 var Beer = Backbone.Model.extend({
   defaults: {
     name: '',

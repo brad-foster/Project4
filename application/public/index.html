@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <meta charset="UTF-8">
     <title>Barley</title>
-    <script type="text/javascript" src="js/ageChecker.js"></script>
+    <!-- // <script type="text/javascript" src="js/ageChecker.js"></script> -->
+    <!-- // <script type="text/javascript">ageCheck.checkCookie();</script> -->
   </head>
   <body>
-    <div class="container">
+    <header>
       <h1>Barley</h1>
+    </header>
+
+    <h2>Add a brew to your collection:</h2>
+
       <table class="table">
         <thead>
           <tr>
@@ -17,14 +24,13 @@
             <th>Image</th>
           </tr>
           <tr>
-            <td><input class="name-input" value="Bell's Two Hearted Ale"></td>
-            <td><input class="style-input" value="IPA"></td>
-            <td><input class="image-input" value="http://www.bellsbeer.com/files/cache/5d74e6106496dac038580f61eb253b1e.jpg"></td>
+            <td><input class="name-input" value="Heady Topper" maxlength="18"></td>
+            <td><input class="style-input" value="Double IPA" maxlength="18"></td>
+            <td><input class="image-input" value="http://craftcans.com/craftcanspics/htcansclosebig.jpg"></td>
             <td><button class="add-beer">Add</button></td>
           </tr>
         </thead>
       </table>
-    </div>
 
     <div class="beers-list"></div>
 
