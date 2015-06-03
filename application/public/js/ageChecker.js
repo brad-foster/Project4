@@ -1,7 +1,7 @@
 var ageCheck = {
 
   minimumAge : 21,
-  userIsOldEnoughPage : "file:///Users/bradfoster/dev/portfolio_projects/Project4/application/public/index.html",
+  userIsOldEnoughPage : "https://www.barleyapp.herokuapp.com/api/beers",
   userNotOldEnoughPage : "http://www.motts.com/products/2/100-apple-juice",
 
   start: function() {

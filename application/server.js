@@ -28,6 +28,10 @@ app.all('/*', function(req, res, next) {
   next();
 });
 
+app.get('/', function(req, res){
+  res.sendfile('/public/ageVerification.html')
+});
+
 app.get('/api/beers', function(req, res){
   Beer.find(function(err, docs){
     docs.forEach(function(item){
