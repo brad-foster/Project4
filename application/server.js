@@ -2,7 +2,19 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/barley');
+var uristring =
+  process.env.MONGOLAB_URI ||
+  'mongodb://localhost/barley';
+
+var port = process.env.PORT || 3000;
+
+mongoose.connect(uristring, function (err, res){
+  if (err) {
+    console.log('ERROR connecting to:' + uristring + '. ' + err)
+  } else {
+    console.log('Succeeded connected to: ' + uristring);
+  }
+};
 
 var Schema = mongoose.Schema;
 
@@ -66,7 +78,6 @@ app.put('/api/beers/:id', function(req, res){
   });
 });
 
-var port = process.env.PORT || 3000;
 
 app.listen(port);
 console.log('server on ' + port);

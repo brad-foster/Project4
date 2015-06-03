@@ -82,4 +82,12 @@
     text-align: center;
     margin-top: 7%;
   }
+
+  iframe {
+    border: 7.5px solid black;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    margin-right: 22%;
+  }
 }
