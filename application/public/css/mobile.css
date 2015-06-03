@@ -1,15 +1,85 @@
 @media (max-width: 600px){
-
   h1 {
-    font-size: 75px;
+    font-family: 'Lato', sans-serif;
+    font-size: 27.5px;
+    margin: 0 auto;
+    margin-left: 1%;
+    color: #D3D3D3;
+  }
+
+  h2 {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #D3D3D3;
+    font-size: 22.5px;
+    margin-top: 2%;
   }
 
   .table {
     margin: 0 auto;
+    margin-top: -1.5%;
   }
 
   th {
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #D3D3D3;
+    font-size: 17.5px;
+    display: block;
+    float: left;
   }
 
+  td {
+    display: block;
+    text-align: center;
+  }
+
+  input {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #D3D3D3;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .add-beer{
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  #beer-block {
+    border: 7.5px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: #D3D3D3;
+    opacity: .8;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+    border: 2.5px solid black;
+    margin: .5%;
+  }
+
+  .name {
+    font-family: 'Lato', sans-serif;
+    font-size: 4vw;
+  }
+
+  .style {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+  }
+
+  button {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+  }
+
+  #beer-block-elements {
+    text-align: center;
+    margin-top: 7%;
+  }
 }

@@ -27,7 +27,6 @@ var BeerView = Backbone.View.extend({
   update: function(){
     this.model.set('name', $('.name-update').val());
     this.model.set('style', $('.style-update').val());
-    // this.model.set('image', $('.image-update').val());
 
     this.model.save(null, {
       success: function(response){
