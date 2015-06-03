@@ -41,7 +41,7 @@ app.all('/*', function(req, res, next) {
 });
 
 app.get('/', function(req, res){
-  res.sendfile('/public/index.html');
+  res.sendfile('/public/ageVerification.html');
 });
 
 app.get('/api/beers', function(req, res){
