@@ -29,7 +29,7 @@ app.all('/*', function(req, res, next) {
 });
 
 app.get('/', function(req, res){
-  res.sendfile('/public/ageVerification.html');
+  res.sendfile('/public/index.html');
 });
 
 app.get('/api/beers', function(req, res){
