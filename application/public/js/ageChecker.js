@@ -1,8 +1,7 @@
 var ageCheck = {
 
   minimumAge : 21,
-  userIsOldEnoughPage : "https://www.barleyapp.herokuapp.com/api/beers",
-  userNotOldEnoughPage : "http://www.motts.com/products/2/100-apple-juice",
+  userIsOldEnoughPage : "file:///Users/bradfoster/dev/portfolio_projects/Project4copy/application/public/index.html",
 
   start: function() {
     this.setUsersBirthday();
@@ -56,7 +55,7 @@ var ageCheck = {
   },
 
   notMinimumAge : function() {
-    window.location = this.userNotOldEnoughPage
+      $('#age-check').append("<h2>Access denied.</h2>");
   },
 
   userIsOverMinimumAge: function () {
