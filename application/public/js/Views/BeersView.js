@@ -26,7 +26,7 @@ var BeersView = Backbone.View.extend({
     var self = this;
     this.$el.html('');
     _.each(this.model.toArray(), function(beer){
-      self.$el.append((new BeerView({model: beer})).render().$el);
+      self.$el.prepend((new BeerView({model: beer})).render().$el);
     return this;
     });
   }
