@@ -3,12 +3,13 @@ $(document).ready(function(){
     var beer = new Beer({
       name: $('.name-input').val(),
       style: $('.style-input').val(),
-      image: $('.image-input').val()
+      image: $('.image-input').val(),
     });
     $('.name-input').val('');
     $('.style-input').val('');
     $('.image-input').val('');
-    beers.add(beer);
+    // $('.rating-input').prop("checked", false);
+    // beers.add(beer);
 
     beer.save(null, {
       success: function(response){

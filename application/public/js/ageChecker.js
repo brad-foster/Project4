@@ -88,7 +88,7 @@ var ageCheck = {
   checkCookie:   function () {
     var usersBirthday=this.getCookie("usersBirthday");
     if (usersBirthday==null || usersBirthday=="") {
-      window.location = "ageCheckTester.html";
+      window.location = "ageVerification.html";
     }
   }
 }

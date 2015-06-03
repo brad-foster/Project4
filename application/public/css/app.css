@@ -45,6 +45,12 @@ input {
   color: #D3D3D3;
   font-size: 25px;
   font-family: 'Lato', sans-serif;
+  border: 0;
+}
+
+.rating {
+  color: #D3D3D3;
+  font-size: 20px;
 }
 
 .add-beer{
@@ -80,9 +86,16 @@ img {
   font-size: 20px;
 }
 
+.rating-display {
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
 button {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 #beer-block-elements {

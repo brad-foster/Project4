@@ -29,7 +29,7 @@ app.all('/*', function(req, res, next) {
 });
 
 app.get('/', function(req, res){
-  res.sendfile('/public/ageVerification.html')
+  res.sendfile('/public/ageVerification.html');
 });
 
 app.get('/api/beers', function(req, res){
@@ -66,7 +66,7 @@ app.put('/api/beers/:id', function(req, res){
   });
 });
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 app.listen(port);
 console.log('server on ' + port);
