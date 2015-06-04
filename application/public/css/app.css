@@ -116,7 +116,9 @@ button {
 
 iframe {
   float: right;
-  margin-right: 1.75%;
+  margin: 1%;
+  margin-top: 8%;
+  margin-right: 2.5%;
   border: 5px solid black;
   height: 20vw;
   width: 30vw;
