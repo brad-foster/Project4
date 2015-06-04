@@ -119,10 +119,18 @@ button {
   margin-top: 30px;
 }
 
+#map-header {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  left: 1080px;
+  top: 420px;
+  color: white;
+}
+
 iframe {
   float: right;
   margin: 1%;
-  margin-top: 6.5%;
+  margin-top: 9.5%;
   margin-right: 2.5%;
   border: 5px solid black;
   height: 20vw;
