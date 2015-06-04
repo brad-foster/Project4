@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('.style-input').val('');
     $('.image-input').val('');
     // $('.rating-input').prop("checked", false);
-    // beers.add(beer);
+    beers.add(beer);
 
     beer.save(null, {
       success: function(response){

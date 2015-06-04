@@ -4,7 +4,8 @@ var Beer = Backbone.Model.extend({
   defaults: {
     name: '',
     style: '',
-    image: ''
+    image: '',
+    // rating: ''
   },
   url: '/api/beers'
 });
