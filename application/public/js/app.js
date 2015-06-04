@@ -4,11 +4,14 @@ $(document).ready(function(){
       name: $('.name-input').val(),
       style: $('.style-input').val(),
       image: $('.image-input').val(),
+      rating: $('input[name="rating"]:checked').val()
     });
+
     $('.name-input').val('');
     $('.style-input').val('');
     $('.image-input').val('');
-    // $('.rating-input').prop("checked", false);
+    $('.rating-input').prop("checked", false);
+
     beers.add(beer);
 
     beer.save(null, {
