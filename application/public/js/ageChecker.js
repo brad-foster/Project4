@@ -1,7 +1,7 @@
 var ageCheck = {
 
   minimumAge : 21,
-  userIsOldEnoughPage : "/public/isOldEnough.html",
+  userIsOldEnoughPage : "/public/index.html",
 
   start: function() {
     this.setUsersBirthday();
@@ -87,7 +87,7 @@ var ageCheck = {
   checkCookie:   function () {
     var usersBirthday=this.getCookie("usersBirthday");
     if (usersBirthday==null || usersBirthday=="") {
-      window.location = "isOldEnough.html";
+      window.location = "/index.html";
     }
   }
 }
