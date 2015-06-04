@@ -122,9 +122,10 @@ button {
 #map-header {
   font-family: 'Lato', sans-serif;
   position: relative;
-  left: 1240px;
-  top: 480px;
+  left: 1220px;
+  top: 470px;
   color: white;
+  font-weight: bold;
 }
 
 iframe {
