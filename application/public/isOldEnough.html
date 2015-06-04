@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <meta charset="UTF-8">
+    <title>Barley</title>
+    <!-- // <script type="text/javascript" src="js/ageChecker.js"></script>
+    // <script type="text/javascript">ageCheck.checkCookie();</script> -->
+  </head>
+  <body>
+    <header>
+      <h1>Barley</h1>
+    </header>
+
+    <h2>Add a brew to your collection:</h2>
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <td><input class="name-input" value="Heady Topper" maxlength="18"></td>
+            <td><input class="style-input" value="IPA" maxlength="18"></td>
+            <td><input class="image-input" value="http://craftcans.com/craftcanspics/htcansclosebig.jpg"></td>
+            <!-- <td>
+              <span class="rating">Rating:</span> <input type="radio" name="rating" class="rating-input" value="1"><span class="rating">1</span>
+              <input type="radio" name="rating" class="rating-input" value="2"><span class="rating">2</span>
+              <input type="radio" name="rating" class="rating-input" value="3"><span class="rating">3</span>
+              <input type="radio" name="rating" class="rating-input" value="4"><span class="rating">4</span>
+              <input type="radio" name="rating" class="rating-input" value="5"><span class="rating">5</span>
+            </td> -->
+            <td><button class="add-beer">Add</button></td>
+          </tr>
+        </thead>
+      </table>
+
+    <div class="beers-list"></div>
+
+    <script type="text/template" class="beers-list-template">
+      <div id="beer-block">
+        <div id="beer-block-elements">
+          <div><span class="name"><%= name %></span></div>
+          <div><span class="style"><%= style %></span></div>
+          <div><span class="image"><img src="<%= image %>"/></span></div>
+          <div><img id="star" src="http://i.imgur.com/tMI3Is8.png"></div>
+          <div>
+            <button class="edit-beer">Edit</button>
+            <button class="delete-beer">Delete</button>
+            <button class="update-beer" style="display: none">Update</button>
+            <button class="cancel" style="display: none">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d99362.47198898865!2d-77.0145665!3d38.89934875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbeer+distributors+near+Washington%2C+DC!5e0!3m2!1sen!2sus!4v1433365760252" frameborder="0"></iframe>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/Collections/BeersCollection.js"></script>
+    <script src="js/Models/BeerModel.js"></script>
+    <script src="js/Views/BeerView.js"></script>
+    <script src="js/Views/BeersView.js"></script>
+  </body>
+</html>
