@@ -83,11 +83,23 @@
     margin-top: 7%;
   }
 
+  #beer-map {
+    position: relative;
+    top: 90%;
+    text-align: center;
+  }
+
   iframe {
-    border: 7.5px solid black;
-    height: 200px;
-    width: 200px;
-    margin: 0 auto;
-    margin-right: 22%;
+    border: 5px solid black;
+    height: 40vw;
+    width: 50vw;
+  }
+
+  #map-footer {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
   }
 }

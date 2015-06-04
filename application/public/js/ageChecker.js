@@ -55,7 +55,8 @@ var ageCheck = {
   },
 
   notMinimumAge : function() {
-      $('#age-check').append("<h2>Access denied.</h2>");
+      alert("Sorry, must be 21 to access this site.");
+      // $('#age-check').append("<h2>Access denied.</h2>");
   },
 
   userIsOverMinimumAge: function () {
