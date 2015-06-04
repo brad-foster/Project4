@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head profile="https://barleyapp.herokuapp.com/">
     <title>Barley</title>
     <link rel="stylesheet" href="css/ageCheck.css">
     <script src="js/ageChecker.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <link rel="icon"
+      type="image/png"
+      href="http://budgetlightforum.com/sites/all/modules/smileys/packs/Roving/beer.png">
   </head>
   <body>
     <div id="age-check">
@@ -166,14 +172,11 @@
          <option value="1913">1913</option>
        </select>
 
-       <button id="submit" onclick="ageCheck.start()">Continue to Barley</button>
+       <button id="age-submit" onclick="ageCheck.start()">Continue to Barley</button>
        <noscript>
          You must have javascript enabled to view this page.
        </noscript>
      </div>
 
-     <script src="bower_components/jquery/dist/jquery.js"></script>
-     <script src="bower_components/underscore/underscore.js"></script>
-     <script src="bower_components/backbone/backbone.js"></script>
   </body>
 </html>
