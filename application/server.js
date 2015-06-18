@@ -21,12 +21,22 @@ var Schema = mongoose.Schema;
 var BeerSchema = new Schema({
   name: String,
   style: String,
-  image: String
+  image: String,
+  rating: String
 });
 
 mongoose.model('Beer', BeerSchema);
 
 var Beer = mongoose.model('Beer');
+
+var UserSchema = new Schema({
+  email: String,
+  password: String
+});
+
+mongoose.model('User', UserSchema);
+
+var User = mongoose.model('User');
 
 var app = express();
 
@@ -71,6 +81,19 @@ app.put('/api/beers/:id', function(req, res){
   console.log('Received an UPDATE request for _id: ' + req.params.id);
   Beer.update({_id: req.params.id}, req.body, function(err){
     res.send({_id: req.params.id});
+  });
+});
+
+// user requests
+
+app.post('/api/users', function(req, res){
+  console.log('Received a POST request');
+  for (var key in req.body) {
+    console.log(key + ': ' + req.body[key]);
+  }
+  var user = new User(req.body);
+  user.save(function(err, doc){
+    res.send(doc);
   });
 });
 

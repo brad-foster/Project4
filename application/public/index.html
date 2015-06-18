@@ -19,10 +19,43 @@
 
   <body>
     <header>
-      <h1 id="barley-main-header">Barley</h1>
+      <ul>
+        <li id="barley-main-header">Barley</li>
+        <li class="register"><a href="#signupmodal" id="logintrigger">Sign Up</a></li>
+        <li class="register"><a href="#loginmodal" id="signuptrigger">Log In</a></li>
+      </ul>
     </header>
 
-    <h2>Add a brew to your collection:</h2>
+    <div id="loginmodal" style="display:none;">
+      <h1>User Login</h1>
+      <form id="loginform" name="loginform" method="post" action="index.html">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" class="txtfield" tabindex="1">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+
+        <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+      </form>
+    </div>
+
+    <div id="signupmodal" style="display:none;">
+      <h1>Sign Up Here!</h1>
+      <form id="signupform" name="signupform">
+        <label for="email">Email:</label>
+        <input type="text" name="username" id="signup-email" class="txtfield" tabindex="1">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="signup-password" class="txtfield" tabindex="2">
+
+        <label for="password">Confirm Password:</label>
+        <input type="password" name="password" id="signup-password-confirm" class="txtfield" tabindex="2">
+
+        <div class="center"><input type="submit" name="signupbtn" id="signupbtn" class="flatbtn-blu hidemodal" value="Sign Up" tabindex="3"></div>
+      </form>
+    </div>
+
+    <h2 id="add-a-brew">Add a brew to your collection:</h2>
 
       <table class="table">
         <thead>
@@ -48,6 +81,13 @@
           <div><span class="name"><%= name %></span></div>
           <div><span class="style"><%= style %></span></div>
           <div><span class="image"><img src="<%= image %>"/></span></div>
+          <span class="star-rating">
+            <input type="radio" name="rating" value="1"><i></i>
+            <input type="radio" name="rating" value="2"><i></i>
+            <input type="radio" name="rating" value="3"><i></i>
+            <input type="radio" name="rating" value="4"><i></i>
+            <input type="radio" name="rating" value="5"><i></i>
+          </span>
           <div>
             <button class="edit-beer">Edit</button>
             <button class="delete-beer">Delete</button>
@@ -63,8 +103,11 @@
     <script src="bower_components/backbone/backbone.js"></script>
     <script src="js/app.js"></script>
     <script src="js/Collections/BeersCollection.js"></script>
+    <script src="js/Collections/UsersCollection.js"></script>
     <script src="js/Models/BeerModel.js"></script>
+    <script src="js/Models/UserModel.js"></script>
     <script src="js/Views/BeerView.js"></script>
     <script src="js/Views/BeersView.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
   </body>
 </html>

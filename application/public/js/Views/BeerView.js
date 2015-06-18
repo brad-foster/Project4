@@ -8,7 +8,8 @@ var BeerView = Backbone.View.extend({
     'click .edit-beer': 'edit',
     'click .update-beer': 'update',
     'click .cancel': 'cancel',
-    'click .delete-beer': 'delete'
+    'click .delete-beer': 'delete',
+    'click .star-rating': 'rate'
   },
 
   edit: function (){
@@ -49,6 +50,23 @@ var BeerView = Backbone.View.extend({
       },
       error: function(){
         console.log('Failed to DELETE beer!')
+      }
+    });
+  },
+
+  rate: function(){
+    this.model.set('rating', $('input[name="rating"]:checked').val());
+    console.log($('input[name="rating"]:checked').val());
+
+    var rating = this.$('.star-rating').html();
+    this.$('.star-rating').html('<input type="radio" class="rating-update" value="' + rating + '">');
+
+    this.model.save(null, {
+      success: function(response){
+        console.log('Successfully RATED beer with _id: ' + response.toJSON()._id);
+      },
+      error: function(response){
+        console.log('Failed to rate beer!');
       }
     });
   },
